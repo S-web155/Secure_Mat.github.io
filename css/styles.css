@@ -1,0 +1,177 @@
+:root{
+    --bg: #ffffff;
+    --fg: #111827;
+    --muted: #6b7280;
+    --card: #f9fafb;
+    --accent: #0ea5a6;
+    --button-bg: #0ea5a6;
+    --button-fg: #ffffff;
+}
+
+[data-theme="dark"]{
+    --bg: #0b1220;
+    --fg: #e6eef6;
+    --muted: #9aa6b2;
+    --card: #0f1724;
+    --accent: #34d399;
+    --button-bg: #2563eb;
+    --button-fg: #e6eef6;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    background:var(--bg);
+    color:var(--fg);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    transition:background .25s ease,color .25s ease;
+}
+
+.background-img{
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.background-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: white;
+}
+
+.overlay .text {
+  margin: auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: semi-transparent background for better text visibility */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.theme-toggle{
+    background:transparent;
+    border:1px solid rgba(0,0,0,0.06);
+    padding:.5rem .6rem;
+    border-radius:6px;
+    cursor:pointer;
+    color:var(--fg);
+    font-size:1.1rem;
+}
+
+.login-widget{
+    position:absolute;
+    top:1.25rem;
+    right:1.25rem;
+    display:flex;
+    gap:0.75rem;
+    z-index:100;
+}
+
+.user-menu{
+    display:flex;
+    gap:0.5rem;
+    align-items:center;
+}
+
+.user-name{
+    padding:0.45rem 0.8rem;
+    border-radius:6px;
+    background:var(--card);
+    color:var(--fg);
+    border:1px solid rgba(0,0,0,0.06);
+    font-weight:600;
+}
+
+.logout-link{
+    padding:0.45rem 0.8rem;
+    border-radius:6px;
+    text-decoration:none;
+    background:transparent;
+    color:var(--button-bg);
+    border:2px solid var(--button-bg);
+    font-weight:600;
+}
+
+.logout-link:hover{background:var(--button-bg); color:var(--button-fg);} 
+
+.login-link, .signup-link{
+    padding:0.6rem 1.2rem;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:500;
+    font-size:0.95rem;
+    transition:all 0.25s ease;
+    cursor:pointer;
+    border:none;
+}
+
+.login-link{
+    color:var(--button-fg);
+    background:var(--button-bg);
+}
+
+.login-link:hover{
+    opacity:0.9;
+    transform:translateY(-2px);
+    box-shadow:0 4px 12px rgba(14, 165, 166, 0.3);
+}
+
+.signup-link{
+    color:var(--button-bg);
+    background:transparent;
+    border:2px solid var(--button-bg);
+}
+
+.signup-link:hover{
+    background:var(--button-bg);
+    color:var(--button-fg);
+}
+
+.container{
+    max-width:980px;
+    margin:2rem auto;
+    padding:0 1rem;
+}
+
+.site-header{
+    position:relative;
+}
+
+.product{
+    display:flex;
+    gap:1.25rem;
+    align-items:stretch;
+    background:var(--card);
+    padding:1.25rem;
+    border-radius:8px;
+    box-shadow:0 6px 18px rgba(2,6,23,0.06);
+}
+
+.product-image{
+    width:260px;
+    min-height:180px;
+    background:linear-gradient(135deg,var(--accent),#6ee7b7);
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:rgba(255,255,255,0.9);
+    font-weight:700;
+}
+
+.product-info{flex:1}
+.tagline{color:var(--muted);margin-top:0.25rem}
+.features{margin:1rem 0 1.25rem;padding-left:1.1rem;color:var(--muted)}
