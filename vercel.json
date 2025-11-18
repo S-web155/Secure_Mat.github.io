@@ -1,0 +1,30 @@
+{
+  "buildCommand": "echo 'No build needed for static + serverless'",
+  "outputDirectory": "./",
+  "functions": {
+    "api/signup.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    },
+    "api/login.js": {
+      "memory": 1024,
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/signup",
+      "destination": "/api/signup.js"
+    },
+    {
+      "source": "/api/login",
+      "destination": "/api/login.js"
+    }
+  ],
+  "env": {
+    "DB_HOST": "@db_host",
+    "DB_USER": "@db_user",
+    "DB_PASSWORD": "@db_password",
+    "DB_NAME": "@db_name"
+  }
+}

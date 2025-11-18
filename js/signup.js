@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Send data to server
             try {
-                const response = await fetch('./api/signup.php', {
+                const response = await fetch('/api/signup', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

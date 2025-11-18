@@ -1,0 +1,16 @@
+{
+  "name": "securemat-site",
+  "version": "1.0.0",
+  "description": "SecureMat Anti-theft Mat website with serverless auth",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build needed'",
+    "test": "echo 'No tests configured'"
+  },
+  "dependencies": {
+    "mysql2": "^3.6.0",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {}
+}
