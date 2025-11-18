@@ -5,10 +5,12 @@ This project is a simple website dedicated to showcasing an innovative anti-thef
 
 ## Project Structure
 ```
-anti-theft-mat-site
+SECUREMAT-SITE
 ├── index.html        # Main HTML document for the website
 ├── css
 │   └── styles.css    # Stylesheet for the website
+├── images
+│   └── background.jpg
 ├── js
 │   └── main.js       # JavaScript file for interactivity
 └── README.md         # Documentation for the project
