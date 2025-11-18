@@ -3,11 +3,12 @@ const mysql = require('mysql2/promise');
 const bcryptjs = require('bcryptjs');
 
 const dbConfig = {
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 3306,
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '221183',
+  host: process.env.DB_HOST || 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com',
+  port: process.env.DB_PORT ? Number(process.env.DB_PORT) : 4000,
+  user: process.env.DB_USER || 'vHxJTKoqWKEPjkX.root',
+  password: process.env.DB_PASSWORD || 'fTBN483SmB67BKT7',
   database: process.env.DB_NAME || 'securemat_db',
+  ca : process.env.DB_CA || 'certificate/isgrootx1.pem',
 };
 
 if (process.env.DB_CA) {
