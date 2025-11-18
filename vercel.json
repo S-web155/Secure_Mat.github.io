@@ -4,5 +4,26 @@
       "memory": 1024,
       "maxDuration": 30
     }
+<<<<<<< HEAD
+=======
+  },
+  "rewrites": [
+    {
+      "source": "/api/signup",
+      "destination": "/api/signup.js"
+    },
+    {
+      "source": "/api/login",
+      "destination": "/api/login.js"
+    }
+  ],
+  "env": {
+    "DB_HOST": "@DB_HOST",
+    "DB_USER": "@DB_USER",
+    "DB_PASSWORD": "@DB_PASSWORD",
+    "DB_NAME": "@DB_NAME"
+    "DB_PORT": "@DB_PORT"
+    "DB_CA": "@DB_CA"
+>>>>>>> refs/remotes/origin/main
   }
 }
