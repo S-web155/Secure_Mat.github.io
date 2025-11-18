@@ -46,7 +46,7 @@ document.getElementById('login-form').addEventListener('submit', async function(
             }
 
             alert('Login successful!');
-            window.location.href = 'index.html';
+            window.location.href = 'dashboard.html';
         } else {
             alert('Login failed: ' + (data && data.message ? data.message : 'Unknown error'));
         }
