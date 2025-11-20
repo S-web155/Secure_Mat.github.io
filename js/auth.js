@@ -1,5 +1,18 @@
-// auth.js — manage logged-in state UI
+// auth.js — manage logged-in state UI and authentication checks
 document.addEventListener('DOMContentLoaded', function () {
+    const userJson = localStorage.getItem('securemat_user');
+    
+    // If on index.html and user is logged in, redirect to dashboard
+    if (userJson && window.location.pathname.includes('index.html')) {
+        try {
+            const user = JSON.parse(userJson);
+            window.location.href = 'dashboard.html';
+            return;
+        } catch (e) {
+            console.error('auth.js: error parsing user data', e);
+        }
+    }
+
     const widget = document.querySelector('.login-widget');
     if (!widget) return;
 
@@ -39,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     try {
-        const userJson = localStorage.getItem('securemat_user');
         if (userJson) {
             const user = JSON.parse(userJson);
             renderLoggedIn(user);
